@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body id="B">
+
+<h1 id="title">Hello</h1>
+<label>HELLO</label>
+<textarea></textarea>
+<button id="btn">Click Me</button>
+<p id="p" class="PPP" >this is the paragraph content now modify it by using JS</p>
+<button >by class</button>
+<script>
+  document.getElementById("btn").addEventListener("click", function()
+   {
+    document.getElementById("title").textContent = "Changed!";
+    document.getElementById("title").style.color = "blue";
+    document.getElementById("B").style.backgroundColor="grey"
+    document.getElementById("title").textContent = "vokey";
+    document.getElementsByClassName("ppp").style.color="purple"
+  });
+</script>
+
+</body>
+</html>

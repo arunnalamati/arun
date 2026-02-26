@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Selector Examples</title>
+  <style>
+    .box {
+      color: black;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="mainTitle">DOM Selectors Example</h2>
+
+  <p class="box">Paragraph 1</p>
+  <p class="box">Paragraph 2</p>
+  <p>Paragraph 3</p>
+
+  <button onclick="ById()">Change by ID</button>
+  <button onclick="ByClass()">Change by Class</button>
+  <button onclick="ByTag()">Change by Tag</button>
+  <button onclick="ByQuery()">Change by Query</button>
+
+  <script>
+
+    // 1️⃣ getElementById
+    function ById() {
+      let title = document.getElementById("mainTitle");
+      title.style.color = "red";
+      title.textContent = "Changed using getElementById";
+    }
+
+    // 2️⃣ getElementsByClassName
+    function ByClass() {
+      let elements = document.getElementsByClassName("box");
+      elements[0].style.color = "blue";
+      elements[1].style.color = "green";
+    }
+
+    // 3️⃣ getElementsByTagName
+    function ByTag() {
+      let paragraphs = document.getElementsByTagName("p");
+      paragraphs[2].style.color = "purple";
+    }
+
+    // 4️⃣ querySelector
+    function ByQuery() {
+      let firstBox = document.querySelector(".box");
+      firstBox.style.fontSize = "30px";
+
+      let allBoxes = document.querySelectorAll(".box");
+      allBoxes[0].style.backgroundColor = "yellow";
+      allBoxes[1].style.backgroundColor = "lightgray";
+    }
+
+  </script>
+
+</body>
+</html>
